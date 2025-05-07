@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">My favorite games</string>
+
+    <string name="affirmation_list_desc">List of favorite games</string>
+
+    <string name="title1">Terraria</string>
+    <string name="title2">Mobile Legends</string>
+    <string name="title3">Firewatch</string>
+    <string name="title4">The Elder Scrolls : Skyrim</string>
+    <string name="title5">Monster Hunter World</string>
+    <string name="title6">Genshin Impact</string>
+    <string name="title7">Delta Force</string>
+    <string name="title8">Magic Chess Go Go</string>
+    <string name="title9">STAR WARS Jedi: Fallen Order</string>
+    <string name="title10">Minecraft</string>
+
+    <string name="year1">2011</string>
+    <string name="year2">2016</string>
+    <string name="year3">2016</string>
+    <string name="year4">2016</string>
+    <string name="year5">2018</string>
+    <string name="year6">2020</string>
+    <string name="year7">2025</string>
+    <string name="year8">2025</string>
+    <string name="year9">2019</string>
+    <string name="year10">2011</string>
+
+    <string name="detail1">Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!</string>
+    <string name="detail2">Bergabung dengan teman Anda di Mobile Legends: Bang Bang, Game MOBA 5v5 terbaru, dan bertarung melawan Player sungguhan! Pilih Hero favorit Anda dan bentuk tim yang sempurna dengan teman Anda! Matchmaking 10 detik, pertandingan 10 menit. Laning, Jungling, Team Fight, dan menghancurkan Turret, semua kesenangan dari Game aksi dan MOBA PC berada dalam genggaman Anda! Tunjukkan semangat Esports Anda!</string>
+    <string name="detail3">Firewatch is a single-player first-person mystery set in the Wyoming wilderness, where your only emotional lifeline is the person on the other end of a handheld radio.</string>
+    <string name="detail4">Winner of more than 200 Game of the Year Awards, The Elder Scrolls V: Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features.</string>
+    <string name="detail5">Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.</string>
+    <string name="detail6">Genshin Impact adalah game RPG Open World terbaru. Kamu adalah seorang pengembara yang menjelajah sebuah dunia fantasi yang teramat luas, kamu dapat menjelajahi tujuh bangsa, bertemu berbagai karakter berkemampuan dan berkepribadian unik, melawan musuh-musuh kuat, dan berkelana mencari saudaramu yang hilang. Di dunia yang luas ini, biarkan rasa keingintahuan membawamu menguak misteri-misteri yang tersembunyi, sampai akhirnya kamu dapat bertemu kembali dengan saudaramu, dan menyaksikan akhir dari kisah perjalananmu.</string>
+    <string name="detail7">Pertempuran Epic Warfare 24vs24, Rasakan map besar, puluhan senjata, berbagai mode permainan menarik, dan update yang terus menerus! Warfare membawa kalian ke medan perang dinamis yang penuh kekacauan dan kehancuran environment. Baik kalian menembaki musuh di darat, laut, dan udara, atau menyelamatkan rekan satu tim sebagai medic, pilih role kalian dan raih kemenangan!</string>
+    <string name="detail8">Magic Chess: Go Go - Game strategi multiplayer baru yang terinspirasi dari Mobile Legends: Bang Bang. Dengan gameplay seperti catur, game ini kasual dan mudah dimainkan kapan saja, di mana saja bersama teman-teman! Di sini, kemenangan bergantung pada strategi dan sedikit keberuntungan daripada keterampilan pengendalian mikro. Di setiap babak, kamu bisa mengendalikan Commander untuk membeli dan meningkatkan Hero, menyusun Sinergi, menggunakan equipment, dan menempatkan hero dengan cerdik untuk mengalahkan lawan. Kalahkan 7 player lain secara bertahap untuk memenangkan pertandingan.</string>
+    <string name="detail9">A galaxy-spanning adventure awaits in Star Wars Jedi: Fallen Order, a 3rd person action-adventure title from Respawn. An abandoned Padawan must complete his training, develop new powerful Force abilities, and master the art of the lightsaber - all while staying one step ahead of the Empire.</string>
+    <string name="detail10">Bangun, jelajahi, bertahan hidup! Main dengan teman dan buat duniamu sendiri! Jelajahi dunia terbuka dengan membangun, membuat item, dan bertahan hidup di game sandbox membangun terbaik. Kumpulkan sumber daya, coba bertahan hidup di malam hari, dan rancang petualangan epik balok demi balok. Jelajahi dan buat item sesuka hati di dunia yang terbuka sepenuhnya tempat kamu bisa bermain dengan teman, membangun kota balok, membuka peternakan, menambang jauh ke bawah tanah, menghadapi musuh misterius, atau sekadar bereksperimen sejauh imajinasi membawamu!</string>
+
+    <string name="link1">https://store.steampowered.com/app/105600/Terraria/</string>
+    <string name="link2">https://play.google.com/store/apps/details?id=com.mobile.legends</string>
+    <string name="link3">https://store.steampowered.com/app/383870/Firewatch/</string>
+    <string name="link4">https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/</string>
+    <string name="link5">https://store.steampowered.com/app/582010/Monster_Hunter_World/</string>
+    <string name="link6">https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact</string>
+    <string name="link7">https://play.google.com/store/apps/details?id=com.garena.game.df</string>
+    <string name="link8">https://play.google.com/store/apps/details?id=com.mobilechess.gp</string>
+    <string name="link9">https://store.steampowered.com/app/1172380/STAR_WARS_Jedi_Fallen_Order/</string>
+    <string name="link10">https://play.google.com/store/apps/details?id=com.mojang.minecraftpe</string>
+</resources>
