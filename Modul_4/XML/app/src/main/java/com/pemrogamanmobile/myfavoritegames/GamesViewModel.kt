@@ -33,15 +33,3 @@ class GamesViewModel(
         Timber.d("Game selected: $game")
     }
 }
-
-class GamesViewModelFactory(
-    private val gameCategory: String
-) : androidx.lifecycle.ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(GamesViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST")
-            return GamesViewModel(gameCategory) as T
-        }
-        throw IllegalArgumentException("Unknown ViewModel class")
-    }
-}

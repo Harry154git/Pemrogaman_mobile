@@ -40,12 +40,9 @@ class GamesListFragment : Fragment() {
 
                 // Intent ke aplikasi lain menggunakan URI
                 val url = requireContext().getString(game.steamLinkResourceId)
+                Timber.d("Intent to other app, and the game is: $url")
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                if (intent.resolveActivity(requireContext().packageManager) != null) {
-                    startActivity(intent)
-                } else {
-                    Timber.e("No application can handle this intent.")
-                }
+                startActivity(intent)
             },
             onDetailClicked = { game ->
                 val title = requireContext().getString(game.titleResourceId)
