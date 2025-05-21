@@ -22,9 +22,9 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(navController = navController, startDestination = "home") {
                         composable("home") {
-                            HomeScreen(onDetailClick = { affirmation ->
+                            HomeScreen(onDetailClick = { game ->
                                 navController.navigate(
-                                    "detail/${affirmation.titleResourceId}/${affirmation.imageResourceId}/${affirmation.yearResourceId}/${affirmation.detailResourceId}"
+                                    "detail/${game.titleResourceId}/${game.imageResourceId}/${game.yearResourceId}/${game.detailResourceId}"
                                 )
                             })
                         }

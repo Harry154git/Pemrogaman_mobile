@@ -21,12 +21,12 @@ class DetailFragment : Fragment() {
         .root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val affirmation = args.affirmation
+        val games = args.games
         with(binding) {
-            detailImageView.setImageResource(affirmation.imageResourceId)
-            detailTitleText.text  = getString(affirmation.titleResourceId)
-            detailYearText.text   = getString(affirmation.yearResourceId)
-            detailDescText.text   = getString(affirmation.detailResourceId)
+            detailImageView.setImageResource(games.imageResourceId)
+            detailTitleText.text  = getString(games.titleResourceId)
+            detailYearText.text   = getString(games.yearResourceId)
+            detailDescText.text   = getString(games.detailResourceId)
         }
     }
 

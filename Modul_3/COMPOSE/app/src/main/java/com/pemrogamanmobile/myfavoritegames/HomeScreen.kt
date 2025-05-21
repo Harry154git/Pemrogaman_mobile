@@ -6,18 +6,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 import com.pemrogamanmobile.myfavoritegames.data.Datasource
-import com.pemrogamanmobile.myfavoritegames.model.Affirmation
+import com.pemrogamanmobile.myfavoritegames.model.Games
 
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
-    onDetailClick: (Affirmation) -> Unit
+    onDetailClick: (Games) -> Unit
 ) {
-    val affirmations = Datasource().loadAffirmations()
+    val games = Datasource().loadGames()
 
     LazyColumn(modifier = modifier) {
-        items(affirmations) { affirmation ->
-            AffirmationCard(affirmation = affirmation, onDetailClick = onDetailClick)
+        items(games) { game ->
+            GameCard(games = game, onDetailClick = onDetailClick)
         }
     }
 }

@@ -2,13 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/affirmationListFragment">
+    app:startDestination="@id/gamesListFragment">
 
     <fragment
-        android:id="@+id/affirmationListFragment"
-        android:name="com.pemrogamanmobile.myfavoritegames.ui.AffirmationListFragment"
+        android:id="@+id/gamesListFragment"
+        android:name="com.pemrogamanmobile.myfavoritegames.ui.GamesListFragment"
         android:label="Games List"
-        tools:layout="@layout/fragment_affirmation_list">
+        tools:layout="@layout/fragment_games_list">
         <action
             android:id="@+id/action_list_to_detail"
             app:destination="@id/detailFragment"/>
@@ -20,7 +20,7 @@
         android:label="Detail"
         tools:layout="@layout/fragment_detail">
         <argument
-            android:name="affirmation"
-            app:argType="com.pemrogamanmobile.myfavoritegames.data.Affirmation"/>
+            android:name="games"
+            app:argType="com.pemrogamanmobile.myfavoritegames.data.Games"/>
     </fragment>
 </navigation>

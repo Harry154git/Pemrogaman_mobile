@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My favorite games</string>
 
-    <string name="affirmation_list_desc">List of favorite games</string>
+    <string name="games_list_desc">List of favorite games</string>
 
     <string name="title1">Terraria</string>
     <string name="title2">Mobile Legends</string>
