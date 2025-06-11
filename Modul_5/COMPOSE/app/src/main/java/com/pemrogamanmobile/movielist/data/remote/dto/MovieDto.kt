@@ -1,0 +1,18 @@
+package com.pemrogamanmobile.movielist.data.remote.dto
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class MovieDto(
+    val id: Int,
+    val title: String,
+    val overview: String,
+    @SerialName("poster_path") val posterPath: String,
+    @SerialName("release_date") val releaseDate: String
+)
+
+@Serializable
+data class MovieResponseDto(
+    val results: List<MovieDto>
+)
