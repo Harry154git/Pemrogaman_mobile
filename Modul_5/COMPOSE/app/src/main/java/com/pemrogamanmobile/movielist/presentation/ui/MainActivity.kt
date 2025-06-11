@@ -3,7 +3,8 @@ package com.pemrogamanmobile.movielist.presentation.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.Surface
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavType
@@ -19,6 +20,8 @@ import com.pemrogamanmobile.movielist.presentation.ui.screen.DetailScreen
 import com.pemrogamanmobile.movielist.presentation.ui.screen.MainScreen
 import com.pemrogamanmobile.movielist.presentation.viewmodel.MovieViewModel
 import com.pemrogamanmobile.movielist.presentation.viewmodel.MovieViewModelFactory
+import com.pemrogamanmobile.movielist.presentation.viewmodel.ThemeViewModel
+import com.pemrogamanmobile.movielist.presentation.viewmodel.ThemeViewModelFactory
 import com.pemrogamanmobile.movielist.presentation.ui.theme.MovieListTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,19 +31,37 @@ class MainActivity : ComponentActivity() {
         val db = MovieDatabase.getDatabase(applicationContext)
         val repository = MovieRepositoryImpl(RetrofitInstance.api, db.movieDao())
         val useCase = MovieUseCase(repository)
-        val viewModel = ViewModelProvider(this, MovieViewModelFactory(useCase))[MovieViewModel::class.java]
+        val movieViewModel = ViewModelProvider(this, MovieViewModelFactory(useCase))[MovieViewModel::class.java]
+
+        val themeViewModel = ViewModelProvider(this, ThemeViewModelFactory(applicationContext))[ThemeViewModel::class.java]
 
         setContent {
-            MovieListTheme {
+
+            val isDarkMode by themeViewModel.isDarkMode.collectAsState()
+
+            MovieListTheme(darkTheme = isDarkMode) {
                 Surface(color = Color(0xFF131418)) {
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "main") {
                         composable("main") {
-                            MainScreen(viewModel, navController)
+                            MainScreen(
+                                viewModel = movieViewModel,
+                                navController = navController,
+                                isDarkMode = isDarkMode,
+                                onToggleTheme = { themeViewModel.toggleTheme() }
+                            )
                         }
-                        composable("detail/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) { backStackEntry ->
+                        composable(
+                            "detail/{id}",
+                            arguments = listOf(navArgument("id") { type = NavType.IntType })
+                        ) { backStackEntry ->
                             val id = backStackEntry.arguments?.getInt("id") ?: -1
-                            DetailScreen(viewModel = viewModel, movieId = id)
+                            DetailScreen(
+                                viewModel = movieViewModel,
+                                movieId = id,
+                                isDarkMode = isDarkMode,
+                                onToggleTheme = { themeViewModel.toggleTheme()}
+                            )
                         }
                     }
                 }

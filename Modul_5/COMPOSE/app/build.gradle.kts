@@ -84,4 +84,6 @@ dependencies {
     implementation(libs.preference.ktx)
 
     implementation(libs.material3)
+
+    implementation(libs.material.icons.extended)
 }

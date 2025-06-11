@@ -7,12 +7,12 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -23,11 +23,15 @@ import com.pemrogamanmobile.movielist.domain.model.Movie
 
 @Composable
 fun MovieCard(movie: Movie, onClick: () -> Unit) {
+    val colorScheme = MaterialTheme.colorScheme
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(12.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF343539))
+        colors = CardDefaults.cardColors(
+            containerColor = colorScheme.primary
+        )
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {
 
@@ -56,7 +60,11 @@ fun MovieCard(movie: Movie, onClick: () -> Unit) {
                 ) {
                     Text(
                         text = movie.title,
-                        style = TextStyle(fontSize = 26.sp, fontWeight = FontWeight.Bold, color = Color.White),
+                        style = TextStyle(
+                            fontSize = 26.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colorScheme.onSurface
+                        ),
                         modifier = Modifier.weight(1f)
                     )
 
@@ -64,7 +72,10 @@ fun MovieCard(movie: Movie, onClick: () -> Unit) {
 
                     Text(
                         text = movie.releaseDate,
-                        style = TextStyle(fontSize = 16.sp, color = Color(0xFF7C7C86)),
+                        style = TextStyle(
+                            fontSize = 16.sp,
+                            color = colorScheme.onSurfaceVariant
+                        ),
                         modifier = Modifier
                             .wrapContentWidth(Alignment.End)
                             .align(Alignment.CenterVertically)
@@ -76,11 +87,18 @@ fun MovieCard(movie: Movie, onClick: () -> Unit) {
                 Column(modifier = Modifier.fillMaxWidth()) {
                     Text(
                         text = "tentang film ini:",
-                        style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                        style = TextStyle(
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colorScheme.onSurface
+                        )
                     )
                     Text(
                         text = movie.overview,
-                        style = TextStyle(fontSize = 14.sp, color = Color.White),
+                        style = TextStyle(
+                            fontSize = 14.sp,
+                            color = colorScheme.onSurface
+                        ),
                         modifier = Modifier.padding(top = 4.dp)
                     )
                 }
@@ -93,13 +111,16 @@ fun MovieCard(movie: Movie, onClick: () -> Unit) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Button(
-                        onClick = {
-                            onClick()
-                        },
-                        modifier = Modifier.width(100.dp).height(44.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFb0c4ff), contentColor = Color.White)
+                        onClick = onClick,
+                        modifier = Modifier
+                            .width(100.dp)
+                            .height(44.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorScheme.onSurface,
+                            contentColor = colorScheme.onPrimary
+                        )
                     ) {
-                        Text("Detail", style = TextStyle(fontSize = 16.sp, color = Color.Black))
+                        Text("Detail", style = TextStyle(fontSize = 16.sp))
                     }
                 }
             }

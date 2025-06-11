@@ -16,6 +16,7 @@ room = "2.6.1"
 coroutines = "1.7.3"
 navigationCommonAndroid = "2.9.0"
 navigationComposeAndroid = "2.9.0"
+compose = "1.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -52,6 +53,8 @@ datastore-preferences = { module = "androidx.datastore:datastore-preferences", v
 preference-ktx = { module = "androidx.preference:preference-ktx", version = "1.2.1" }
 androidx-navigation-common-android = { group = "androidx.navigation", name = "navigation-common-android", version.ref = "navigationCommonAndroid" }
 androidx-navigation-compose-android = { group = "androidx.navigation", name = "navigation-compose-android", version.ref = "navigationComposeAndroid" }
+
+material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "compose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
